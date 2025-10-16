@@ -6,7 +6,17 @@
     <title>Hello Page</title>
 </head>
 <body>
-    <h1>Hello, Issah!</h1>
+    <h1>Welcome to My Django Journey!</h1>
+    <p>
+        Hi, I'm Issah. This project is my hands-on lab for learning the Django web framework.
+        I'm building features and exploring concepts as I go.
+    </p>
+    <hr>
+    <h2>Try it out!</h2>
+    <form action="{% url 'index' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <button type="submit">Greet Me</button>
+    </form>
 </body>
 </html>
-
